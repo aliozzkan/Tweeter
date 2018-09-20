@@ -3,6 +3,8 @@
  **Clone simplified version of Twitter**
 
  >*[aliozzkan](https://github.com/aliozzkan "aliozzkan")*
+ >Client Side *VueJs*
+ >Server Side *Express*
 
 ## Setup For Run
 ```bash
