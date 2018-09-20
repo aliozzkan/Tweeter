@@ -2,15 +2,21 @@ const mongoose = require('mongoose')
 const Tweet = require('../models/tweet')
 
 const getTweets = (req, res) => {
-    Tweet.find().select('_id tweet user date active').populate('user').exec()
+    Tweet.find().select('_id tweet user date active like rt').populate('user').exec()
         .then(docs => {
-            res.status(200).json(docs.map(doc => {
+            res.status(200).json(docs.reverse().map(doc => {
                 return {
+                    id: doc._id,
                     tweet: doc.tweet,
-                    user: doc.user,
+                    user: {
+                        username: doc.user.username,
+                        img: 'http://' + req.headers.host + '/uploads/' + doc.user.img
+                    },
                     date: doc.date,
                     active: doc.active,
-                    path: 'http://localhost:3000/tweets/' + doc._id
+                    path: 'http://localhost:3000/tweets/' + doc._id,
+                    like: doc.like,
+                    rt: doc.rt
                 }
             }))
         })

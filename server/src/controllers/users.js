@@ -101,10 +101,11 @@ const login = (req, res) => {
             }
 
             const sendUser = {
+                id:user._id,
                 username: user.username,
                 email: user.email,
-                img:  user.img
-            
+                img: 'http://' + req.headers.host + '/uploads/' + user.img
+                
             }
 
             const token = jwt.sign(sendUser, 'secret_key', {expiresIn: '1h'})
