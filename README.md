@@ -28,24 +28,6 @@ cd npm run dev
 
 ___
 
-## Project
-
-* Technologies
-    * VueJs
-        * Vuex
-        * Axios
-        * Vue-Router
-    * Express
-        * bcryptjs
-        * jsonwebtoken
-    * MongoDb
-        * MLab
-* Frameworks
-    * Bootstrap 4 
-    * AlertifyJs
-
----
-
 > Code
 ```javascript
     const you = {
