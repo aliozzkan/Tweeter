@@ -26,7 +26,7 @@ cd npm run dev
 * [ ] Trend Topics
 * [ ] Search
 
---
+---
 
 > Code
 ```javascript
