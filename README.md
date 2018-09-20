@@ -48,7 +48,7 @@ ___
 
 > Code
 ```javascript
-    var you = {
+    const you = {
         smile() {
             console.log('=)')
         }
